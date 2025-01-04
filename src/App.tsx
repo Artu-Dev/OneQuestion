@@ -64,7 +64,7 @@ function App() {
       />
       <Button onClick={handleOnClick}/>
 
-      {otherAwsner &&
+      {otherAwsner?.length &&
         <Awsners data={otherAwsner}/>
       }
     </main>
