@@ -1,5 +1,5 @@
 import "./InputContainer.css"
-export const InputContainer = ({questionType, onChange}: any) => {
+export const InputContainer = ({onChange}: any) => {
   return (
     <>  
       <textarea

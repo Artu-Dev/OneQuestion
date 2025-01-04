@@ -10,7 +10,7 @@ function App() {
   const [question, setQuestion] = useState("")
   const [awsner, setAwsner] = useState("")
   const [otherAwsner, setOtherAwsner] = useState([])
-  const [questionType, setQuestionType] = useState("normal")
+  // const [questionType, setQuestionType] = useState("normal")
 
   useEffect(() => {
     const sessionID = localStorage.getItem("sessionID");
@@ -19,13 +19,12 @@ function App() {
       socket.connect();
     }
 
-    function onQuestion({q, type}:any) {
+    function onQuestion({q}:any) {
       setQuestion(q);
-      setQuestionType(type);
+      // setQuestionType(type);
     }
 
-    function onSession({sessionID, userID}:any) {
-      console.log({sessionID})
+    function onSession({sessionID}:any) {
       socket.auth = {sessionID};
       localStorage.setItem("sessionID", sessionID);
     }
@@ -33,7 +32,7 @@ function App() {
 
     socket.on("connect", () => console.log("conectado"));
     socket.on('disconnect', () => console.log("desconectado"));
-    socket.on("session", ({sessionID, userID}) => onSession({sessionID, userID}));
+    socket.on("session", ({sessionID}) => onSession({sessionID}));
     socket.on('question', (data) => onQuestion(data));
     socket.on('awnsersResponse', (data) => setOtherAwsner(data));
 
@@ -60,8 +59,7 @@ function App() {
       <QuestionContainer 
         question={question}
       />
-      <InputContainer 
-        questionType={questionType}
+      <InputContainer
         onChange={handleOnChange}
       />
       <Button onClick={handleOnClick}/>
