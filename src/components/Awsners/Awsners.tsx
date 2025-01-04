@@ -1,6 +1,6 @@
 import "./awsner.css"
 
-export const Awsners = ({ data }) => {
+export const Awsners = ({ data }: any) => {
 
   function formatTimestamp(timestamp: number) {
     const now = Date.now();
@@ -25,7 +25,7 @@ export const Awsners = ({ data }) => {
     <div className="awsners-container">
       <h1>Respostas</h1>
       <ul>
-        {data.map((awsner, id) => {
+        {data.map((awsner: any, id: any) => {
           return (
             <li key={id}>
               <p className="awsner-text">{awsner.text}</p>

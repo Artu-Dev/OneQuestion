@@ -28,7 +28,6 @@ function App() {
       console.log({sessionID})
       socket.auth = {sessionID};
       localStorage.setItem("sessionID", sessionID);
-      socket.userID = userID
     }
 
 
@@ -48,7 +47,7 @@ function App() {
   }, [])
   
 
-  function handleOnChange(e) {
+  function handleOnChange(e: any) {
     setAwsner(e.target.value)
   }
 
