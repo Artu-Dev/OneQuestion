@@ -64,7 +64,9 @@ function App() {
       />
       <Button onClick={handleOnClick}/>
 
-      <Awsners data={otherAwsner}/>
+      {otherAwsner &&
+        <Awsners data={otherAwsner}/>
+      }
     </main>
   )
 }
