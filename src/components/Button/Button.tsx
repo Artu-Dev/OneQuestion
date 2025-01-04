@@ -5,6 +5,8 @@ export const Button = ({onClick}) => {
     <button 
         className="submit-button"
         onClick={onClick}
-    >Enviar resposta</button>
+    >
+        Enviar resposta
+    </button>
   )
 }
