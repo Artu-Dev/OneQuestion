@@ -1,0 +1,45 @@
+.awsners-container {
+    background-color: beige;
+    color: #010101;
+    width: 90%;
+    max-width: 30rem;
+    border-radius: .5rem;
+    padding: 1rem;
+}
+.awsners-container h1 {
+    text-align: center;
+    color: #2F2519;
+    margin-bottom: 2rem;
+}
+
+.awsners-container ul {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+.awsners-container ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.awsners-container ul li:not(:last-child) {
+    border-bottom: 1px solid #939393;
+    padding-bottom: .2rem;
+}
+
+.awsners-container ul li .awsner-text {
+    font-size: 1.2rem;
+    width: 70%;
+    max-height: 40rem;
+}
+
+
+.awsners-container ul li .awsner-date {
+    font-size: .85rem;
+    font-weight: 700;
+    width: 30%;
+    text-align: end;
+    color: #FF4301;
+}
