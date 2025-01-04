@@ -1,6 +1,6 @@
 import { io } from "socket.io-client";
 
-const URL =  process.env.NODE_ENV === 'production' ? undefined : 'http://localhost:1234';
+const URL =  process.env.NODE_ENV === 'production' ? undefined : 'https://onequestionserver.onrender.com/';
 
 export const socket = io(URL, {
     auth: {
