@@ -1,5 +1,5 @@
 .submit-button {
-    background: #e2e2e2;
+    background: beige;
     color: #FF4301;
     font-size: 1.1rem;
     font-weight: bold;
@@ -11,7 +11,7 @@
 .submit-button:hover {
     cursor: pointer;
     background: #FF4301;
-    color: #e2e2e2;
+    color: beige;
 }
 
 .submit-button:active {
