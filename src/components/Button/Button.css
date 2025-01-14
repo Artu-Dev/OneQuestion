@@ -1,6 +1,6 @@
 .submit-button {
-    background: beige;
-    color: #FF4301;
+    background: #FDF0D5;
+    color: #780000;
     font-size: 1.1rem;
     font-weight: bold;
     padding: .5rem 2rem;
@@ -10,8 +10,8 @@
 
 .submit-button:hover {
     cursor: pointer;
-    background: #FF4301;
-    color: beige;
+    background: #C1121F;
+    color: #FDF0D5;
 }
 
 .submit-button:active {

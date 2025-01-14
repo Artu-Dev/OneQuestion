@@ -1,23 +1,23 @@
 .awsner-input {
     resize: none;
     font-size: 1.5rem;
-    color: beige;
+    color: #FDF0D5;
     outline: none;
-    outline: .05rem solid #e2e2e2;
+    outline: .1rem solid #FDF0D5;
     border-radius: 1rem;
     height: 8rem;
     width: 100%;
     max-width: 25rem;
-    background-color: #3c332a;
+    background-color: #002133;
     padding: .2em 1.5em;
     transition: all ease-in .3s;
 }
 
 .awsner-input:focus {
-    outline: .15rem solid #FA7D09;
+    outline: .15rem solid #C1121F;
 }
 
 .awsner-input:hover {
-    outline: .15rem solid #FF4301;
-    background-color: #4A3F35;
+    outline: .15rem solid #780000;
+    background-color: #004266;
 }

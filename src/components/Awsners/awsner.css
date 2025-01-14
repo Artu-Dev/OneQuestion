@@ -1,5 +1,5 @@
 .awsners-container {
-    background-color: beige;
+    background-color: #FDF0D5;
     color: #010101;
     width: 90%;
     max-width: 30rem;
@@ -22,6 +22,24 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+}
+
+.awsners-container ul li .likeBtn {
+    position: absolute;
+    display: flex;
+    gap: .2rem;
+    align-items: center;
+    right: .2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: #C1121F;
+    transition: all ease .3s;
+    user-select: none;
+} 
+
+.awsners-container ul li .likeBtn:active {
+    scale: 1.2;
 }
 
 .awsners-container ul li:not(:last-child) {
@@ -40,6 +58,7 @@
     font-size: .85rem;
     font-weight: 700;
     width: 30%;
+    margin-right: 2.5rem;
     text-align: end;
-    color: #FF4301;
+    color: #003049;
 }

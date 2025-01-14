@@ -1,7 +1,9 @@
 import "./awsner.css"
+import { GoHeart } from "react-icons/go";
+import { GoHeartFill } from "react-icons/go";
 
-export const Awsners = ({ data }: any) => {
-
+export const Awsners = ({ data, onLikeAwsner }: any) => {
+  const sessionID = localStorage.getItem("sessionID")
   function formatTimestamp(timestamp: number) {
     const now = Date.now();
     const diff = Math.floor((now - timestamp) / 1000);
@@ -27,9 +29,15 @@ export const Awsners = ({ data }: any) => {
       <ul>
         {data.map((awsner: any, id: any) => {
           return (
-            <li key={id}>
+            <li key={id} onClick={onLikeAwsner}>
               <p className="awsner-text">{awsner.text}</p>
               <p className="awsner-date">{formatTimestamp(awsner.date)}</p>
+              <p className={`likeBtn ${awsner.like ? "liked" : ""}`}>
+                {
+                  awsner.likes?.includes(sessionID)? <GoHeartFill/> : <GoHeart />
+                }
+                <span className="likeNumber">{awsner.likes?.length || 0}</span>
+              </p>
             </li>
           );
         })}

@@ -9,8 +9,12 @@ import { Button } from './components/Button/Button';
 function App() {
   const [question, setQuestion] = useState("")
   const [awsner, setAwsner] = useState("")
-  const [otherAwsner, setOtherAwsner] = useState([])
+  const [otherAwsner, setOtherAwsner] = useState([
+    {text: "teste de texto", date: new Date(), like: false},
+    {text: "teste de texto", date: new Date(), like: true}
+  ])
   // const [questionType, setQuestionType] = useState("normal")
+  console.log(otherAwsner)
 
   useEffect(() => {
     const sessionID = localStorage.getItem("sessionID");
@@ -29,7 +33,7 @@ function App() {
       localStorage.setItem("sessionID", sessionID);
     }
 
-
+    // otimizar depois, componentizar e mesclar algumas
     socket.on("connect", () => console.log("conectado"));
     socket.on('disconnect', () => console.log("desconectado"));
     socket.on("session", ({sessionID}) => onSession({sessionID}));
@@ -54,6 +58,10 @@ function App() {
     socket.emit("awsners", awsner)
   }
 
+  function handleLikeBtn() {
+    socket.emit("like")
+  }
+
   return (
     <main>
       <QuestionContainer 
@@ -65,7 +73,7 @@ function App() {
       <Button onClick={handleOnClick}/>
 
       {otherAwsner?.length > 0  &&
-        <Awsners data={otherAwsner}/>
+        <Awsners data={otherAwsner} onLikeAwsner={handleLikeBtn}/>
       }
     </main>
   )
