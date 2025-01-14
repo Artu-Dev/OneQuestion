@@ -58,8 +58,8 @@ function App() {
     socket.emit("awsners", awsner)
   }
 
-  function handleLikeBtn() {
-    socket.emit("like")
+  function handleLikeBtn(awsnerID: string) {
+    socket.emit("like", awsnerID)
   }
 
   return (
@@ -73,7 +73,7 @@ function App() {
       <Button onClick={handleOnClick}/>
 
       {otherAwsner?.length > 0  &&
-        <Awsners data={otherAwsner} onLikeAwsner={handleLikeBtn}/>
+        <Awsners data={otherAwsner} onLikeAwsner={(awsnerID:string) => handleLikeBtn(awsnerID)}/>
       }
     </main>
   )

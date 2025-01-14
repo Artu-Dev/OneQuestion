@@ -29,7 +29,7 @@ export const Awsners = ({ data, onLikeAwsner }: any) => {
       <ul>
         {data.map((awsner: any, id: any) => {
           return (
-            <li key={id} onClick={onLikeAwsner}>
+            <li key={id} onClick={() => onLikeAwsner(awsner.sessionID)}>
               <p className="awsner-text">{awsner.text}</p>
               <p className="awsner-date">{formatTimestamp(awsner.date)}</p>
               <p className={`likeBtn ${awsner.like ? "liked" : ""}`}>
