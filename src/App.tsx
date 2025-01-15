@@ -1,6 +1,6 @@
 import './App.css'
 import QuestionContainer from './components/QuestionContainer/QuestionContainer'
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { InputContainer } from './components/InputContainer/InputContainer';
 import { socket } from "./socket"
 import { Awsners } from './components/Awsners/Awsners';
