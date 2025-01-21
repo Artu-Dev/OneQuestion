@@ -14,6 +14,15 @@ self.addEventListener("push", function (event) {
         renotify: true
     };
 
+    self.addEventListener("notificationclick", function (event) {
+        event.notification.close();
+        if (event.action === "responder") {
+            event.waitUntil(
+                clients.openWindow("https://one-question-one.vercel.app/")
+            );
+        }
+    });
+
     event.waitUntil(
         self.registration.showNotification("Pergunta do dia!", options)
     );

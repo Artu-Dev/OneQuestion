@@ -1,16 +1,29 @@
+.awsner-label {
+    position: relative;
+    width: 100%;
+    max-width: 25rem;
+}
+
 .awsner-input {
     resize: none;
     font-size: 1.5rem;
     color: #FDF0D5;
+    border: none;
     outline: none;
     outline: .1rem solid #FDF0D5;
     border-radius: 1rem;
     height: 8rem;
     width: 100%;
-    max-width: 25rem;
     background-color: #002133;
     padding: .2em 1.5em;
     transition: all ease-in .3s;
+}
+
+.charactersLeft {
+    opacity: .5;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
 }
 
 .awsner-input:focus {

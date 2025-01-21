@@ -1,13 +1,41 @@
 .question-title {
-    color: #FDF0D5;
-    text-shadow: .15rem .15rem #010101;
-    font-size: 3em;
-    font-weight: 700;
-    text-align: center;
-    max-width: 45rem;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  max-width: 45rem;
+  text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+
+  /* Clip Background Image */
+
+  background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* Animate Background Image */
+
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: aitf 80s linear infinite;
+
+  /* Activate hardware acceleration for smoother animations */
+
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+}
+
+/* Animate Background Image */
+
+@-webkit-keyframes aitf {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 .loading {
-    height: 2rem;
-    margin-bottom: 1rem;
+  height: 2rem;
+  margin-bottom: 1rem;
 }

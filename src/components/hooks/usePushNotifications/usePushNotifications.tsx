@@ -8,7 +8,7 @@ export default function usePushNotifications() {
         console.warn("Permissão para notificações negada.");
         return;
       }
-      
+
       navigator.serviceWorker
         .register("service-worker.js")
         .then(async (serviceWorker) => {
